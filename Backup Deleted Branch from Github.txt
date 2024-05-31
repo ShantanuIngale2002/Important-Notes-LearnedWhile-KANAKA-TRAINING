@@ -1,0 +1,424 @@
+This is about DELETING - REPO or BRANCH or BOTH, then it is required to get backup from github
+NOTE : within only 90 Days
+
+
+1. Scenario - I deleted repo;
+Just go to github > settings > repositories > deleted repos > will get list then restore one required
+
+
+
+2. Scneraio - deleted branch;
+
+>> suppose u r in same command prompt the for deleting branch in my case 'master' ie.
+"""
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git branch -D master
+Deleted branch master (was 7ca7eb1).
+"""
+here i got this hash 7ca7eb1
+now just
+"""
+git checkout 7ca7eb1
+""
+will add all files and create master
+now checkout master and go to github will find files or in local storage
+
+ >> suppose command prompt is deleted
+In command prompt of file origined to repo , type
+"""
+git reflog --no-abbrev
+"""
+will get list of all changes made with hashesh then select appropriate where branch is connected having all files u need and
+"""
+git checkout [hash]
+"""
+then check out branch and go to github or local files will get relfected.
+
+
+
+3. Scenario - deleted branch then repo;
+follow 1st and then 2nd.
+
+
+
+
+
+
+
+
+THIS BELOW IS GITHUB STUFF IN COMMAND PROMPT THAT HAPPENED TO ME ON 06 MARCH 2024 IN WEB PAGE PROJECT IT WAS 3RD SCENARIO
+
+
+Microsoft Windows [Version 10.0.19045.4046]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\kanaka>cd Desktop
+
+C:\Users\kanaka\Desktop>cd WebDevelopmentLearn
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn>cd FinalLoginPage
+The system cannot find the path specified.
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn>cd LoginPage
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage>cd FinalLoginPage
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git init
+Initialized empty Git repository in C:/Users/kanaka/Desktop/WebDevelopmentLearn/LoginPage/FinalLoginPage/.git/
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git add .
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git remote add origin https://github.com/ShantanuIngale2002/KANAKA-TRAINING-WEBTASK01-WEBPAGE.git
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git push -u origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/ShantanuIngale2002/KANAKA-TRAINING-WEBTASK01-WEBPAGE.git'
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/ShantanuIngale2002/KANAKA-TRAINING-WEBTASK01-WEBPAGE.git'
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git fetch origin
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 10 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (10/10), 10.85 KiB | 161.00 KiB/s, done.
+From https://github.com/ShantanuIngale2002/KANAKA-TRAINING-WEBTASK01-WEBPAGE
+ * [new branch]      main       -> origin/main
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git rebase origin/main
+fatal: Could not resolve HEAD to a commit
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git merge origin/main
+error: Entry 'homePageHTML.html' would be overwritten by merge. Cannot merge.
+fatal: read-tree failed
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git push origin mian
+error: src refspec mian does not match any
+error: failed to push some refs to 'https://github.com/ShantanuIngale2002/KANAKA-TRAINING-WEBTASK01-WEBPAGE.git'
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/ShantanuIngale2002/KANAKA-TRAINING-WEBTASK01-WEBPAGE.git'
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git push -f origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/ShantanuIngale2002/KANAKA-TRAINING-WEBTASK01-WEBPAGE.git'
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   assets/profile/Female.png
+        new file:   assets/profile/Male.png
+        new file:   assets/profile/other.png
+        new file:   homePageHTML.html
+        new file:   loginPageHTML.html
+        new file:   scripts/UtilityPageJS.js
+        new file:   scripts/homePageJS.js
+        new file:   scripts/loginPageJS.js
+        new file:   scripts/signupPageJS.js
+        new file:   style/HomePageCSS.css
+        new file:   style/LoginPageCSS.css
+        new file:   style/commonPageCSS.css
+
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git add .
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git commit -m "adding all files"
+[master (root-commit) 7ca7eb1] adding all files
+ 12 files changed, 2899 insertions(+)
+ create mode 100644 assets/profile/Female.png
+ create mode 100644 assets/profile/Male.png
+ create mode 100644 assets/profile/other.png
+ create mode 100644 homePageHTML.html
+ create mode 100644 loginPageHTML.html
+ create mode 100644 scripts/UtilityPageJS.js
+ create mode 100644 scripts/homePageJS.js
+ create mode 100644 scripts/loginPageJS.js
+ create mode 100644 scripts/signupPageJS.js
+ create mode 100644 style/HomePageCSS.css
+ create mode 100644 style/LoginPageCSS.css
+ create mode 100644 style/commonPageCSS.css
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git push origin master
+Enumerating objects: 18, done.
+Counting objects: 100% (18/18), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (18/18), 209.24 KiB | 5.65 MiB/s, done.
+Total 18 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/ShantanuIngale2002/KANAKA-TRAINING-WEBTASK01-WEBPAGE/pull/new/master
+remote:
+To https://github.com/ShantanuIngale2002/KANAKA-TRAINING-WEBTASK01-WEBPAGE.git
+ * [new branch]      master -> master
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git branch -d master
+error: cannot delete branch 'master' used by worktree at 'C:/Users/kanaka/Desktop/WebDevelopmentLearn/LoginPage/FinalLoginPage'
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git checkout main
+Switched to a new branch 'main'
+branch 'main' set up to track 'origin/main'.
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git add .
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git commit -m "adding to main al files"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git push origin main
+Everything up-to-date
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git push origin main
+Everything up-to-date
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git push -f origin main
+Everything up-to-date
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git -d master
+unknown option: -d
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--config-env=<name>=<envvar>] <command> [<args>]
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git branch -d master
+error: the branch 'master' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D master'
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git branch -D master
+Deleted branch master (was 7ca7eb1).
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git push origin --delete master
+To https://github.com/ShantanuIngale2002/KANAKA-TRAINING-WEBTASK01-WEBPAGE.git
+ - [deleted]         master
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git checkout main
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git push -u origin main
+Everything up-to-date
+branch 'main' set up to track 'origin/main'.
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git push -u origin origin/main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/ShantanuIngale2002/KANAKA-TRAINING-WEBTASK01-WEBPAGE.git
+ * [new reference]   origin/main -> origin/main
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    homePageHTML.html
+        deleted:    loginPageHTML.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git log
+commit 2948c58a3c90852dd0b676b744523487c458bae0 (HEAD -> main, origin/main)
+Author: shantu_02 <91074851+ShantanuIngale2002@users.noreply.github.com>
+Date:   Wed Mar 6 11:38:40 2024 +0530
+
+    Add files via upload
+
+commit 4f482c868df576d0b44ae10ff0d03e4101581721
+Author: shantu_02 <91074851+ShantanuIngale2002@users.noreply.github.com>
+Date:   Wed Mar 6 10:44:22 2024 +0530
+
+    Update README.md
+
+commit 5fb9d2e116ecfa01667d40c4f58869c14602ff15
+Author: shantu_02 <91074851+ShantanuIngale2002@users.noreply.github.com>
+Date:   Wed Mar 6 10:32:13 2024 +0530
+
+    Initial commit
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git branch
+* main
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    homePageHTML.html
+        deleted:    loginPageHTML.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    homePageHTML.html
+        deleted:    loginPageHTML.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git log
+commit 2948c58a3c90852dd0b676b744523487c458bae0 (HEAD -> main, origin/main)
+Author: shantu_02 <91074851+ShantanuIngale2002@users.noreply.github.com>
+Date:   Wed Mar 6 11:38:40 2024 +0530
+
+    Add files via upload
+
+commit 4f482c868df576d0b44ae10ff0d03e4101581721
+Author: shantu_02 <91074851+ShantanuIngale2002@users.noreply.github.com>
+Date:   Wed Mar 6 10:44:22 2024 +0530
+
+    Update README.md
+
+commit 5fb9d2e116ecfa01667d40c4f58869c14602ff15
+Author: shantu_02 <91074851+ShantanuIngale2002@users.noreply.github.com>
+Date:   Wed Mar 6 10:32:13 2024 +0530
+
+    Initial commit
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git log
+commit 2948c58a3c90852dd0b676b744523487c458bae0 (HEAD -> main, origin/main)
+Author: shantu_02 <91074851+ShantanuIngale2002@users.noreply.github.com>
+Date:   Wed Mar 6 11:38:40 2024 +0530
+
+    Add files via upload
+
+commit 4f482c868df576d0b44ae10ff0d03e4101581721
+Author: shantu_02 <91074851+ShantanuIngale2002@users.noreply.github.com>
+Date:   Wed Mar 6 10:44:22 2024 +0530
+
+    Update README.md
+
+commit 5fb9d2e116ecfa01667d40c4f58869c14602ff15
+Author: shantu_02 <91074851+ShantanuIngale2002@users.noreply.github.com>
+Date:   Wed Mar 6 10:32:13 2024 +0530
+
+    Initial commit
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    homePageHTML.html
+        deleted:    loginPageHTML.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git branch
+* main
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git branchs
+git: 'branchs' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git branch --help
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git branch --list
+* main
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git reflog --no-abbrev
+2948c58a3c90852dd0b676b744523487c458bae0 (HEAD -> main, origin/main) HEAD@{0}: checkout: moving from main to main
+2948c58a3c90852dd0b676b744523487c458bae0 (HEAD -> main, origin/main) HEAD@{1}: checkout: moving from master to main
+7ca7eb1a2bf6937097dd27121c0ba203ba0c5948 HEAD@{2}: commit (initial): adding all files
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git checkout 7ca77ca7eb1a2bf6937097dd27121c0ba203ba0c5948
+error: pathspec '7ca77ca7eb1a2bf6937097dd27121c0ba203ba0c5948' did not match any file(s) known to git
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git checkout 2948c58a3c90852dd0b676b744523487c458bae0
+Note: switching to '2948c58a3c90852dd0b676b744523487c458bae0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 2948c58 Add files via upload
+D       homePageHTML.html
+D       loginPageHTML.html
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git checkout 7ca77ca7eb1a2bf6937097dd27121c0ba203ba0c5948
+error: pathspec '7ca77ca7eb1a2bf6937097dd27121c0ba203ba0c5948' did not match any file(s) known to git
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git checkout 7ca7eb1
+Previous HEAD position was 2948c58 Add files via upload
+HEAD is now at 7ca7eb1 adding all files
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git checkout -b master
+Switched to a new branch 'master'
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git branch
+  main
+* master
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\kanaka\Desktop\WebDevelopmentLearn\LoginPage\FinalLoginPage>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+by satvashi >>>
+forgot fields-> click remove span <done>
+add address in sign up text-area <done>
+gender -> radios <done>
+admin (see in pic) <done>
+programming skills field -> suggestions, get down below selected
+all select to datalist (dynamic by local storages) <done>
+array of emails and features in single local storage <done>
+login==singup==forgetpass=font size <not happening;done>
+button in modals equal size justify-evenly <not happening;done>
+
+
+by mam >>>
+login.html{ user => logged in array of objects
+} goto
+navbar in home.html{
+	profile icon (right corner) -> view / edit / logout
+	redirect to home
+}
+
+#array 
+
+
+
+
+
+
+
+18 march 2024
+
+1. navbar icon
+2. profile white and small pic
+3. ui toggle button and create its modal
+4. bootstrap logo between navbar for <lg
+5. view on github button small
+6. search button click -> modal create
+
+
+
+29-03-2024
+1. local storage initialization //done
+2. inline css //done
+3. create a utitlity js for functions // done
+4. use bootstrap instead of red/revert border // kindof
+5. Form-reset if credentials are wrong instead of nullify functions // done

@@ -1,0 +1,22 @@
+…or create a new repository on the command line
+
+echo "# hm" >> README.md  (dontknow what it is)
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/ShantanuIngale2002/[reponame].git
+git push -u origin main
+
+
+
+
+…or push an existing repository from the command line
+
+git init
+git add . (all file)
+<or> git add file_name (individual file add each one time)
+git commit -m "first commit"
+git remote add origin https://github.com/ShantanuIngale2002/hm.git
+git branch -M main
+git push -u origin main <or> git push -f origin main
