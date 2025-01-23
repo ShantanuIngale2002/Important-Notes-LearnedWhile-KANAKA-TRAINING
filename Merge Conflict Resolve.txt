@@ -1,0 +1,43 @@
+Merge Conflict Solution Summary:
+1. Pull both branches
+2. goto your bug/side-branch do:
+	i. git merge <target-branch>
+3. stage, commit staged and push
+
+
+
+Suppose I have two branches :
+1. dev-vt
+2. shantu02 - built on dev-vt for bug changes
+
+now after a while when i tried to merge shantu02 into dev-vt 'Merge Conflict' occurred.
+
+
+How Merge conflicts occurs:
+i. you created independent branch (shantu02) from target branch (dev-vt).
+ii. after that someone pushed changes into dev-vt, relating to your files from shantu02.
+iii. Now dev-vt is updated with that push, but not your branch (shantu02) - since independent.
+iv. shantu02 is behind that of dev-vt, hence merge conflict occurred.
+
+
+Solution:
+0. Pull dev-vt and also shantu02.
+1. Merge 'dev-vt' [new changes] into your branch 'shantu02' [changes behind].
+	i. git checkout shantu02      (your branch)
+	ii. git merge dev-vt	      (merge target [dev-vt] in yours [shantu02[)
+	iii. Take incoming changes (from dev-vt)
+	iv. If not present, do your bug changes.
+	v. Now you can see so many files inc. your changes.
+	vi. Stage all and commit then push.
+	v. If using azure, you can see new commit with all files, but no merge conflict and only changes that you did since all merge changes from dev-vt are already lies their.
+
+
+- check branch / all other branches available:
+	> git branch
+- checkout to other branch:
+	> git checkout <branch>
+- merge target's code into current branch:
+	> git merge <target-branch>
+
+- Pull, Stage, Commit Staged, Push (done manually in VS - git changes)
+
